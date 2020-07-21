@@ -3,3 +3,31 @@
   flex-direction: column;
   align-items: center;
 }
+
+.btn {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  height: 35px;
+  background-color: white;
+}
+
+.delete-btn {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  height: 35px;
+  background-color: white;
+}
+
+td {
+  width: 22vw;
+  text-align: center;
+  border-bottom: 2px solid rgb(236, 239, 241);
+}
+
+table {
+  border-right: 2px solid rgb(236, 239, 241);
+  background-color: white;
+  margin: 0;
+}

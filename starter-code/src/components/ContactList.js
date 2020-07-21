@@ -1,12 +1,11 @@
 import React from "react";
 
 const ContactList = (props) => {
-  const { contacts } = props;
-  const firstFive = contacts.slice(0, 5);
-  console.log(firstFive);
+  const { contacts, handleDelete } = props;
+  console.log(contacts);
 
   const tableData = () => {
-    return firstFive.map((el, i) => {
+    return contacts.map((el, i) => {
       return (
         <tr key={el.id}>
           <td style={{ height: "175px" }}>
@@ -18,7 +17,12 @@ const ContactList = (props) => {
             {}
           </td>
           <td>{el.name}</td>
-          <td>{el.popularity}</td>
+          <td>{el.popularity.toFixed(2)}</td>
+          <td>
+            <button onClick={() => handleDelete(el.id)} className="delete-btn">
+              Delete
+            </button>
+          </td>
         </tr>
       );
     });
@@ -36,6 +40,9 @@ const ContactList = (props) => {
           </th>
           <th>
             <h3>Popularity</h3>
+          </th>
+          <th>
+            <h3>Action</h3>
           </th>
         </tr>
         {tableData()}
